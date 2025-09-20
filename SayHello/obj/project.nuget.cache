@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "YkdsdNn5/aI=",
+  "success": true,
+  "projectFilePath": "/home/mrx/RiderProjects/SayHello/SayHello/SayHello.csproj",
+  "expectedPackageFiles": [
+    "/home/mrx/.nuget/packages/microsoft.aspnetcore.openapi/9.0.6/microsoft.aspnetcore.openapi.9.0.6.nupkg.sha512",
+    "/home/mrx/.nuget/packages/microsoft.openapi/1.6.17/microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}

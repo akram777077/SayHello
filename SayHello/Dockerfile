@@ -1,15 +1,17 @@
-# المرحلة الأولى: Build
+# Build stage
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
-# انسخ ملفات المشروع
-COPY *.csproj ./
-RUN dotnet restore
+# انسخ ملف csproj من مكانه
+COPY SayHello/SayHello.csproj SayHello/
+RUN dotnet restore SayHello/SayHello.csproj
 
-COPY . ./
+# انسخ بقية الملفات
+COPY . .
+WORKDIR /src/SayHello
 RUN dotnet publish -c Release -o /app
 
-# المرحلة الثانية: Runtime
+# Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:9.0
 WORKDIR /app
 COPY --from=build /app .
